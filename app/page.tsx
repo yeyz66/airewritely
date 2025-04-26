@@ -6,7 +6,6 @@ import Hero from '../components/Hero'; // Import the real Hero component
 import Features from '../components/Features'; // Import the real Features component
 import HowItWorks from '../components/HowItWorks'; // Import the real HowItWorks component
 import Testimonials from '../components/Testimonials'; // Import the real Testimonials component
-import Pricing from '../components/Pricing'; // Import the real Pricing component
 import FAQ from '../components/FAQ'; // Import the real FAQ component
 import SchemaOrg from '../components/SchemaOrg';
 
@@ -304,11 +303,19 @@ export default function Home() {
           </div>
         </section>
 
-        <Features />
-        <HowItWorks />
+        <div id="features">
+          <Features />
+        </div>
+
+        <div id="how-it-works">
+          <HowItWorks />
+        </div>
+
+        <div id="faq">
+          <FAQ />
+        </div>
+
         <Testimonials />
-        <Pricing />
-        <FAQ />
       </main>
 
       <Footer />

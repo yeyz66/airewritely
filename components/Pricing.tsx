@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Check } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 interface PricingTierProps {
   name: string;
   price: string;
+  originalPrice?: string;
   frequency: string;
   description: string;
   features: string[];
@@ -16,6 +18,7 @@ interface PricingTierProps {
 const PricingTier: React.FC<PricingTierProps> = ({
   name,
   price,
+  originalPrice,
   frequency,
   description,
   features,
@@ -37,6 +40,9 @@ const PricingTier: React.FC<PricingTierProps> = ({
     <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">{description}</p>
     <div className="mt-6">
       <span className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{price}</span>
+      {originalPrice && (
+        <span className="ml-2 text-base font-medium text-gray-500 dark:text-gray-400 line-through">{originalPrice}</span>
+      )}
       <span className="ml-1 text-sm font-medium text-gray-500 dark:text-gray-400">{frequency}</span>
     </div>
     <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-400 flex-grow">
@@ -60,51 +66,62 @@ const PricingTier: React.FC<PricingTierProps> = ({
 );
 
 const Pricing: React.FC = () => {
+  const pathname = usePathname();
+  const isOnPricingPage = pathname === '/pricing';
+
   const tiers = [
     {
       name: 'Free',
       price: '$0',
       frequency: '/month',
-      description: 'Get started with essential rewriting features.',
+      description: 'Access all features with certain limitations.',
       features: [
-        '5 Rewrites per day',
-        '2 Writing styles (Casual, Professional)',
+        'Access to all features and writing styles',
+        'Limited usage (5 rewrites per day)',
+        'Maximum 200 characters per rewrite',
+        'Requests placed in queue',
         'Standard AI model',
         'Basic support',
       ],
       cta: 'Start for Free',
-      href: '#rewriter',
+      href: isOnPricingPage ? '/' : '/#rewriter',
     },
     {
       name: 'Pro',
-      price: '$10',
+      price: '$9.9',
+      originalPrice: '$19.9',
       frequency: '/month',
-      description: 'Unlock more power for frequent users and professionals.',
+      description: 'Unlock more features without waiting, perfect for individual use.',
       features: [
-        '100 Rewrites per day',
-        'All 5 Writing styles',
-        'Adjustable intensity control',
+        'Access to all features and writing styles',
+        '100 rewrites per day',
+        'Maximum 1000 characters per rewrite',
+        'No queue, priority processing',
         'Advanced AI model (gpt-4.1-nano)',
-        'Priority support',
+        'Adjustable rewriting intensity',
+        'Priority customer support',
       ],
-      cta: 'Get Started',
+      cta: 'Upgrade to Pro',
       mostPopular: true,
-      href: '#', // Placeholder link for signup/upgrade
+      href: '#', // Placeholder for upgrade link
     },
     {
-      name: 'Team',
-      price: '$25',
+      name: 'Enterprise',
+      price: '$29.9',
       frequency: '/month/user',
-      description: 'Collaborative features for teams and businesses.',
+      description: 'Enterprise-grade service for teams with unlimited usage.',
       features: [
-        'Unlimited Rewrites',
+        'Unlimited rewrites',
+        'Maximum 5000 characters per rewrite',
+        'Fastest processing speed',
         'All Pro features',
-        'Team collaboration tools (coming soon)',
+        'Team collaboration tools',
         'Usage analytics',
         'Dedicated account manager',
+        'API access (coming soon)',
       ],
       cta: 'Contact Sales',
-      href: '#', // Placeholder link for contact
+      href: '#', // Placeholder for contact link
     },
   ];
 
@@ -112,12 +129,12 @@ const Pricing: React.FC = () => {
     <section id="pricing" className="relative isolate bg-white dark:bg-black py-20 sm:py-28">
       <div className="container mx-auto px-4 md:px-8">
         <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
-          <h2 className="text-base font-semibold leading-7 text-blue-600 dark:text-blue-400">Pricing</h2>
+          <h2 className="text-base font-semibold leading-7 text-blue-600 dark:text-blue-400">Pricing Plans</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             Simple Plans for Everyone
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Choose the plan that fits your needs, from occasional use to professional demands.
+            Choose the plan that fits your needs, from casual use to professional demands.
           </p>
         </div>
         <div className="mx-auto grid max-w-md grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">

@@ -20,10 +20,10 @@ const Header: React.FC = () => {
           <span className="font-bold text-lg">AIRewritely</span>
         </Link>
         <nav className="hidden flex-1 items-center space-x-6 text-sm font-medium md:flex">
-          <Link href="#features" className="text-foreground/60 transition-colors hover:text-foreground/80">Features</Link>
-          <Link href="#how-it-works" className="text-foreground/60 transition-colors hover:text-foreground/80">How It Works</Link>
-          <Link href="#pricing" className="text-foreground/60 transition-colors hover:text-foreground/80">Pricing</Link>
-          <Link href="#faq" className="text-foreground/60 transition-colors hover:text-foreground/80">FAQ</Link>
+          <Link href="/#features" className="text-foreground/60 transition-colors hover:text-foreground/80">Features</Link>
+          <Link href="/#how-it-works" className="text-foreground/60 transition-colors hover:text-foreground/80">How It Works</Link>
+          <Link href="/pricing" className="text-foreground/60 transition-colors hover:text-foreground/80">Pricing</Link>
+          <Link href="/#faq" className="text-foreground/60 transition-colors hover:text-foreground/80">FAQ</Link>
           <Link href="/blog" className="text-foreground/60 transition-colors hover:text-foreground/80">Blog</Link>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
