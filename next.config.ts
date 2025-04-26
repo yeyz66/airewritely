@@ -8,18 +8,6 @@ const nextConfig: NextConfig = {
   // Handle redirects for SEO
   async redirects() {
     return [
-      // Redirect from www to non-www (canonical URL)
-      {
-        source: '/:path*',
-        destination: 'https://airewritely.com/:path*',
-        permanent: true,
-        has: [
-          {
-            type: 'host',
-            value: 'www.airewritely.com',
-          },
-        ],
-      },
       // Redirect trailing slashes
       {
         source: '/:path+/',
