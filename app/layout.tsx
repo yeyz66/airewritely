@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
@@ -12,6 +12,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  themeColor: '#4F46E5'
+};
 
 export const metadata: Metadata = {
   title: "Sentence Rewriter | Free AI Sentence Rewriter Tool",
@@ -27,7 +31,6 @@ export const metadata: Metadata = {
     shortcut: { url: '/favicon.svg' }
   },
   manifest: '/manifest.json',
-  themeColor: '#4F46E5',
   openGraph: {
     type: 'website',
     url: 'https://airewritely.com/',
