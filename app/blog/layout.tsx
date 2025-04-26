@@ -23,7 +23,7 @@ export default function BlogLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <section className="bg-white dark:bg-black">
+    <section className={`bg-white dark:bg-black ${geistSans.variable} ${geistMono.variable}`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {children}
       </div>

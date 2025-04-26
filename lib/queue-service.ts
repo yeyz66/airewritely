@@ -128,7 +128,11 @@ export class QueueService {
   }
   
   // 检查任务状态
-  async checkTaskStatus(taskId: string): Promise<{ status: 'queued' | 'processing' | 'completed' | 'error' | 'not_found', data?: any, error?: string }> {
+  async checkTaskStatus(taskId: string): Promise<{ 
+    status: 'queued' | 'processing' | 'completed' | 'error' | 'not_found', 
+    data?: { rewrittenText: string }, 
+    error?: string 
+  }> {
     // 先检查结果表
     const resultData = await this.getTaskResult(taskId);
     if (resultData) {

@@ -39,19 +39,19 @@ export default function BestAiSentenceRewriterTools() {
 
         <p className="lead">
           Finding a <strong>free AI sentence rewriter</strong> that actually delivers quality results can be challenging. 
-          With so many options available, it's important to know which tools offer the best combination of features, 
+          With so many options available, it&apos;s important to know which tools offer the best combination of features, 
           accuracy, and ease of use without breaking the bank.
         </p>
 
         <p>
-          In this comprehensive guide, we'll explore the top 5 <strong>free AI sentence rewriter tools</strong> available 
+          In this comprehensive guide, we&apos;ll explore the top 5 <strong>free AI sentence rewriter tools</strong> available 
           in 2023, comparing their key features and helping you choose the best option for your writing needs.
         </p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4">What Makes a Good AI Sentence Rewriter?</h2>
 
         <p>
-          Before diving into specific tools, let's understand what features to look for in an effective 
+          Before diving into specific tools, let&apos;s understand what features to look for in an effective 
           <strong> AI sentence rewriter</strong>:
         </p>
 
@@ -93,7 +93,7 @@ export default function BestAiSentenceRewriterTools() {
           <h3 className="text-xl font-bold mb-3">2. QuillBot</h3>
           <p>
             QuillBot offers a popular paraphrasing tool with a free tier that allows users to rewrite 
-            content with different modes. While not as fully-featured as our tool, it's still a solid option.
+            content with different modes. While not as fully-featured as our tool, it&apos;s still a solid option.
           </p>
           
           <h4 className="font-semibold mt-4 mb-2">Key Features:</h4>
@@ -105,7 +105,7 @@ export default function BestAiSentenceRewriterTools() {
           </ul>
           
           <p className="mt-4">
-            <strong>Best for:</strong> Users who need a quick paraphrase for short texts and don't mind the character limitations.
+            <strong>Best for:</strong> Users who need a quick paraphrase for short texts and don&apos;t mind the character limitations.
           </p>
         </div>
 
@@ -177,12 +177,12 @@ export default function BestAiSentenceRewriterTools() {
           <li><strong>No hidden costs</strong> - Truly free with generous usage limits</li>
           <li><strong>No compromises on features</strong> - Full functionality without paywalls</li>
           <li><strong>Superior quality</strong> - Powered by the latest AI models</li>
-          <li><strong>User privacy</strong> - We don't store your content long-term</li>
+          <li><strong>User privacy</strong> - We don&apos;t store your content long-term</li>
           <li><strong>No account required</strong> - Start rewriting immediately</li>
         </ul>
 
         <p>
-          Our mission is to make high-quality AI writing assistance accessible to everyone, which is why we've built 
+          Our mission is to make high-quality AI writing assistance accessible to everyone, which is why we&apos;ve built 
           the most comprehensive <strong>free AI sentence rewriter tool</strong> available today.
         </p>
 
@@ -208,7 +208,7 @@ export default function BestAiSentenceRewriterTools() {
         </p>
 
         <p>
-          Whether you're a student working on assignments, a professional crafting important emails, or a content 
+          Whether you&apos;re a student working on assignments, a professional crafting important emails, or a content 
           creator developing engaging articles, our <strong>free AI sentence rewriter tool</strong> can help you 
           transform your writing with just a few clicks.
         </p>
