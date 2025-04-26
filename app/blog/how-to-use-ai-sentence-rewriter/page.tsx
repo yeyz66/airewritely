@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import Header from '@/components/Header';
 
 export const metadata: Metadata = {
   title: "How to Use an AI Sentence Rewriter Effectively | Complete Guide",
@@ -19,7 +18,6 @@ export const metadata: Metadata = {
 export default function HowToUseAiSentenceRewriter() {
   return (
     <>
-      <Header />
       <div className="prose prose-lg dark:prose-invert max-w-none">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl mb-6">
           How to Use an AI Sentence Rewriter Effectively: Complete Guide

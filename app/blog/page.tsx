@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import Header from '@/components/Header';
 
 export const metadata: Metadata = {
   title: "AI Sentence Rewriter Blog | Writing Tips & Resources",
@@ -46,7 +45,6 @@ export default function BlogIndex() {
 
   return (
     <>
-      <Header />
       <div className="container mx-auto px-4 md:px-8 py-12">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl mb-6">
