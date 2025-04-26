@@ -1,7 +1,6 @@
 'use client'; // Mark this as a client component for useState and event handlers
 
 import React, { useState, useEffect, useRef } from 'react';
-import Head from 'next/head';
 import Header from '../components/Header'; // Import the real Header component
 import Hero from '../components/Hero'; // Import the real Hero component
 import Features from '../components/Features'; // Import the real Features component
@@ -9,6 +8,7 @@ import HowItWorks from '../components/HowItWorks'; // Import the real HowItWorks
 import Testimonials from '../components/Testimonials'; // Import the real Testimonials component
 import Pricing from '../components/Pricing'; // Import the real Pricing component
 import FAQ from '../components/FAQ'; // Import the real FAQ component
+import SchemaOrg from '../components/SchemaOrg';
 
 // Placeholder components (we will create these later)
 // const Header = () => <header className="py-4 bg-gray-100 dark:bg-gray-900 text-center">Header Placeholder</header>; // Remove placeholder
@@ -177,11 +177,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100">
-      <Head>
-        <title>AI Sentence Rewriter - Enhance Your Writing</title>
-        <meta name="description" content="Rewrite your sentences with AI in various styles and intensities. Perfect for professionals, students, and writers." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SchemaOrg />
 
       <Header />
 
@@ -267,10 +263,10 @@ export default function Home() {
                   disabled={isLoading || !inputText.trim() || isButtonDisabled}
                   className={`w-full px-6 py-3 rounded-lg font-semibold text-white transition-colors duration-300 relative
                     ${isLoading || !inputText.trim() || isButtonDisabled
-                      ? 'bg-gray-400 dark:bg-gray-600 cursor-not-allowed opacity-80'
-                      : 'bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600'
+                      ? 'bg-gray-400 dark:bg-gray-600 opacity-80 cursor-not-allowed'
+                      : 'bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer'
                     } ${(isLoading || isButtonDisabled) && 'pointer-events-none select-none'}`}
-                  title={isLoading || isButtonDisabled ? "Please wait while your request is being processed" : ""}
+                  aria-label={isLoading || isButtonDisabled ? "Processing, please wait" : "Rewrite text"}
                 >
                   {isLoading || isButtonDisabled ? (
                     <span className="flex items-center justify-center">

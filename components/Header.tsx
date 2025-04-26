@@ -22,6 +22,7 @@ const Header: React.FC = () => {
           <Link href="#how-it-works" className="text-foreground/60 transition-colors hover:text-foreground/80">How It Works</Link>
           <Link href="#pricing" className="text-foreground/60 transition-colors hover:text-foreground/80">Pricing</Link>
           <Link href="#faq" className="text-foreground/60 transition-colors hover:text-foreground/80">FAQ</Link>
+          <Link href="/blog" className="text-foreground/60 transition-colors hover:text-foreground/80">Blog</Link>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <button className="md:hidden">

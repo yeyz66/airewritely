@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlidersHorizontal, Palette, Zap, BrainCircuit, CheckCircle } from 'lucide-react'; // Import relevant icons
+import { SlidersHorizontal, Palette, Zap, BrainCircuit, CheckCircle, Lock } from 'lucide-react'; // Import relevant icons
 
 interface FeatureItemProps {
   icon: React.ElementType;
@@ -21,33 +21,33 @@ const Features: React.FC = () => {
   const features = [
     {
       icon: Palette,
-      title: 'Multiple Writing Styles',
-      description: 'Choose from formal, casual, professional, creative, or concise styles to match your needs.',
+      title: 'Multiple AI Rewriting Styles',
+      description: 'Our free AI sentence rewriter offers formal, casual, professional, creative, and concise styles to perfectly match your needs.',
     },
     {
       icon: SlidersHorizontal,
-      title: 'Adjustable Intensity',
-      description: 'Control the degree of change – from subtle tweaks to significant restructuring.',
+      title: 'Adjustable Rewriting Intensity',
+      description: 'Control exactly how much our AI sentence rewriter changes your text – from subtle improvements to complete transformations.',
     },
     {
       icon: Zap,
-      title: 'Instant Results',
-      description: 'Get rewritten sentences in seconds, powered by cutting-edge AI technology.',
+      title: 'Instant Sentence Transformations',
+      description: 'Get your sentences rewritten in seconds with our lightning-fast free AI sentence rewriter tool.',
     },
     {
       icon: BrainCircuit,
-      title: 'Advanced AI Engine',
-      description: "Utilizes OpenAI's gpt-4.1-nano for nuanced and context-aware rewriting.",
+      title: 'Powered by Advanced AI',
+      description: "Our sentence rewriter utilizes OpenAI's powerful models for context-aware, intelligent text transformations.",
     },
     {
       icon: CheckCircle,
-      title: 'Improve Clarity & Impact',
-      description: 'Enhance readability, refine your message, and make your writing more effective.',
+      title: 'Enhance Clarity & Impact',
+      description: 'Our AI sentence rewriter improves readability, refines your message, and makes your writing more effective.',
     },
      {
-      icon: CheckCircle, // Re-using icon, can be changed
-      title: 'Easy Integration',
-      description: 'Simple interface makes it effortless to rewrite text whenever you need it.',
+      icon: Lock,
+      title: 'Completely Free to Use',
+      description: 'Unlike other tools, our AI sentence rewriter is completely free with no hidden charges or premium restrictions.',
     },
   ];
 
@@ -57,16 +57,29 @@ const Features: React.FC = () => {
         <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
           <h2 className="text-base font-semibold leading-7 text-blue-600 dark:text-blue-400">Features</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            Everything You Need to Write Better
+            Why Our Free AI Sentence Rewriter Stands Out
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Our AI rewriter provides powerful tools to elevate your text effortlessly.
+            Our AI sentence rewriter tool offers powerful features to transform your writing instantly and effectively.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <FeatureItem key={feature.title} {...feature} />
           ))}
+        </div>
+        
+        {/* Added SEO content block */}
+        <div className="mt-16 mx-auto max-w-3xl text-center">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            The Ultimate Free AI Sentence Rewriter
+          </h3>
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            Whether you&apos;re a student, professional writer, content creator, or business owner, our sentence rewriter tool helps you communicate more effectively. With our AI-powered technology, you can transform ordinary text into polished, professional content in seconds.
+          </p>
+          <p className="text-gray-600 dark:text-gray-300">
+            Try our free AI sentence rewriter today and experience the difference it makes in your writing quality.
+          </p>
         </div>
       </div>
     </section>
