@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   poweredByHeader: false, // Remove X-Powered-By header for security
   compress: true, // Enable gzip compression for better performance
   
+  // Configure image domains to allow external images
+  images: {
+    domains: ['randomuser.me'],
+    formats: ['image/avif', 'image/webp'],
+  },
+  
   // Handle redirects for SEO
   async redirects() {
     return [
