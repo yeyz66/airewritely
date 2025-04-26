@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="16" cy="16" r="16" fill="#4F46E5"/>
+  
+  <!-- Stylized AI Letter -->
+  <path d="M9 10L12 22H14L15 19H19L20 22H22L25 10H23L21 18L20 15H14L13 18L11 10H9Z" fill="white"/>
+  
+  <!-- Rewriting Line/Pencil -->
+  <path d="M7 24H25" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M23 24L25 22" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+</svg> 

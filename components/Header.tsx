@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu } from 'lucide-react'; // Example icon
 import { useSession, signIn, signOut } from 'next-auth/react'; // Import next-auth hooks
 
@@ -14,8 +15,9 @@ const Header: React.FC = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center mx-auto px-4 md:px-8">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          {/* Replace with actual logo/SVG later */}
-          <span className="font-bold text-lg">RewriterPro</span>
+          {/* Use the SVG favicon as logo */}
+          <Image src="/favicon.svg" alt="AIRewritely Logo" width={24} height={24} />
+          <span className="font-bold text-lg">AIRewritely</span>
         </Link>
         <nav className="hidden flex-1 items-center space-x-6 text-sm font-medium md:flex">
           <Link href="#features" className="text-foreground/60 transition-colors hover:text-foreground/80">Features</Link>
