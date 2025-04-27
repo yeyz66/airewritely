@@ -11,7 +11,7 @@ interface TestimonialCardProps {
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, title, imageUrl }) => (
   <figure className="rounded-lg bg-white dark:bg-gray-800 p-6 shadow-md ring-1 ring-gray-900/5">
     <blockquote className="text-gray-900 dark:text-white">
-      <p className="text-base leading-7">"{quote}"</p>
+      <p className="text-base leading-7">&ldquo;{quote}&rdquo;</p>
     </blockquote>
     <figcaption className="mt-6 flex items-center gap-x-4">
       {imageUrl ? (
